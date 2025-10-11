@@ -15,11 +15,9 @@ export default function Index() {
           <View className="w-full gap-4">
             <TextInput className="w-full border border-gray-300 rounded-md p-3" inputMode="email" placeholder="Email" />
             <TextInput className="w-full border border-gray-300 rounded-md p-3" secureTextEntry placeholder="Password" />
-              <TouchableOpacity className="w-full rounded-md bg-slate-700 text-white text-center p-3 items-center justify-center">
-            <Link href="/(tabs)">
-                <Text className="text-white items-center">Login</Text>
+            <Link href="/(tabs)" className="w-full rounded-md bg-slate-700 text-white text-center p-3 items-center justify-center">
+              <Text className="text-white items-center">Login</Text>
             </Link>
-              </TouchableOpacity>
           </View>
           <Link className="mt-4" href={"./register"}>New here? Register</Link>
         </View>
