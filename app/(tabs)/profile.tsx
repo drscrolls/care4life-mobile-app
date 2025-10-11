@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { Link } from 'expo-router';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -21,7 +21,8 @@ const Profile = () => {
 
 
   return (
-
+    
+    <ScrollView className='bg-white' showsVerticalScrollIndicator={false}>
     <View className="flex-1 p-5 bg-white">
       <Text className="text-xl font-bold text-dark-300 mb-6">
         Update your profile
@@ -57,6 +58,7 @@ const Profile = () => {
           </Link>
       </View>
     </View>
+    </ScrollView>
   )
 }
 

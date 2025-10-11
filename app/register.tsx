@@ -55,7 +55,7 @@ const Register = () => {
                         <TouchableOpacity className="w-full mt-4 rounded-md bg-slate-700 text-white text-center p-3 items-center justify-center">
                             <Text className="text-white items-center">Register</Text></TouchableOpacity>
                     </View>
-                    <Link className="mt-4" href={"./"}>Already a user ? Login</Link>
+                    <Link className="mt-4" href={"./login"}>Already a user ? Login</Link>
                 </View>
             </ScrollView>
         </SafeAreaView>
