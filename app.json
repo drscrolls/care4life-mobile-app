@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "tutorial-app-1",
-    "slug": "tutorial-app-1",
+    "name": "care4life-app",
+    "slug": "care4life-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "tutorialapp1",
+    "scheme": "care4life",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -44,6 +44,19 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "90124738-8243-4b3d-bae7-a7c39df72fd4"
+      }
+    },
+    "owner": "dr.scrolls",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/90124738-8243-4b3d-bae7-a7c39df72fd4"
     }
   }
 }
