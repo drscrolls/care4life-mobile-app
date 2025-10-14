@@ -1,7 +1,7 @@
-import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { Dropdown } from 'react-native-element-dropdown';
-import { Link } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const data = [
@@ -11,6 +11,7 @@ const data = [
 
 const Register = () => {
     const [accountType, setAccountType] = useState(null);
+    const router = useRouter();
 
     const renderLabel = () => {
         return (
@@ -55,7 +56,7 @@ const Register = () => {
                         <TouchableOpacity className="w-full mt-4 rounded-md bg-slate-700 text-white text-center p-3 items-center justify-center">
                             <Text className="text-white items-center">Register</Text></TouchableOpacity>
                     </View>
-                    <Link className="mt-4" href={"./login"}>Already a user ? Login</Link>
+                    <Pressable className="mt-4" onPress={()=> router.navigate("/login")}><Text>Already a user ? Login</Text></Pressable>
                 </View>
             </ScrollView>
         </SafeAreaView>

@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { Dropdown } from 'react-native-element-dropdown';
 
 const data = [
@@ -10,6 +10,7 @@ const data = [
 const Profile = () => {
 
   const [accountType, setAccountType] = useState(null);
+  const router = useRouter();
 
   const renderLabel = () => {
     return (
@@ -53,9 +54,9 @@ const Profile = () => {
           <Text className="text-white items-center">Update</Text>
           </TouchableOpacity>
 
-        <Link href="../login"  className="w-full mt-4 rounded-md bg-red-700 text-white text-center p-3 items-center justify-center">
+        <TouchableOpacity onPress={()=> router.navigate("/login")}  className="w-full mt-4 rounded-md bg-red-700 text-white text-center p-3 items-center justify-center">
           <Text className="text-white items-center">Logout</Text>
-          </Link>
+          </TouchableOpacity>
       </View>
     </View>
     </ScrollView>

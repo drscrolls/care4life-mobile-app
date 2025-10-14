@@ -5,7 +5,7 @@ const ServiceCard = ({name = 'Service Name', description, cost = 100}:any) => {
   
   const showAlertInfo = () => {
      Alert.alert(
-    "Success", // Title of the alert
+    "Okay", // Title of the alert
     "This service has been requested.", // Message of the alert
     [
       {
