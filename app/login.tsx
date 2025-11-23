@@ -35,7 +35,10 @@ export default function Index() {
 
     try {
       const response = await axios.post(apiUrl + '/api/auth/login', payload); // Replace with your API endpoint
-      console.log(response);
+      if(response){
+        console.log(response.data.data.token);
+        localStorage.setItem("token", response.data.data.token);
+      }
     } catch (err) {
       console.log(err);
     } finally {
